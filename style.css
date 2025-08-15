@@ -1,0 +1,57 @@
+/* body {
+    background-color: #f8f9fa;
+  }
+  .spinner-container {
+    display: none;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .book-card img {
+    max-height: 200px;
+    object-fit: contain;
+  }
+  .description {
+    max-height: 150px;
+    overflow: auto;
+  } */
+
+
+
+   body {
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    #loading {
+      display: none;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .book-card img {
+      object-fit: contain;
+      height: 250px;
+    }
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .card-text {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    /* Responsive fix for card button bottom alignment */
+    .card-body {
+      display: flex;
+      flex-direction: column;
+     
+    }
+    .book-card {
+        max-height: 45rem;
+    }
+    .btn {
+      white-space: nowrap;
+    }
+    .description{
+        max-height: 15rem;
+        overflow-y: hidden;
+        
+    }
