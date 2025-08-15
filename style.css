@@ -1,31 +1,25 @@
-/* body {
-    background-color: #f8f9fa;
-  }
-  .spinner-container {
-    display: none;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  .book-card img {
-    max-height: 200px;
-    object-fit: contain;
-  }
-  .description {
-    max-height: 150px;
-    overflow: auto;
-  } */
 
+  body {
+    padding: 20px;
+    background: linear-gradient(135deg, #c9c3ae, #fda085, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
+  }
 
-
-   body {
-      padding: 20px;
-      background: #f8f9fa;
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
     }
-    #loading {
-      display: none;
-      justify-content: center;
-      margin-top: 20px;
+    50% {
+      background-position: 100% 50%;
     }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
     .book-card img {
       object-fit: contain;
       height: 250px;
@@ -45,13 +39,137 @@
      
     }
     .book-card {
-        max-height: 45rem;
+        max-height: 35rem;
     }
     .btn {
       white-space: nowrap;
+   
     }
+
+    
     .description{
-        max-height: 15rem;
+        max-height: 09em;
         overflow-y: hidden;
         
     }
+
+    .book-card {
+        background: rgba(255, 255, 255, 0.15); /* translucent white */
+        backdrop-filter: blur(10px);           /* blur background behind card */
+        -webkit-backdrop-filter: blur(10px);   /* Safari support */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 15px;
+        color: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .book-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+.book-card img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.book-card img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+        
+
+  
+
+
+  #loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 200px;
+  }
+  
+  .book-icon-loader {
+    width: 80px;
+    height: 80px;
+    animation: bounce 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-15px);
+      opacity: 0.8;
+    }
+  }
+  
+  #loading p {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+    animation: blink 1.5s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  
+
+
+
+  #searchForm {
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeSlideDown 3s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  
+  @keyframes fadeSlideDown {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #searchInput {
+    transition: all 0.3s ease;
+    box-shadow: none;
+    border: 1px solid transparent;
+  }
+  
+  #searchInput:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
+    background-color: #fff;
+  }
+  
+  #searchForm button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #searchForm button:hover {
+    background-color: #0b5ed7;
+    transform: scale(1.05);
+  }
+
+  
+  #searchForm {
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    padding: 10px;
+  }
+  
+
+  #searchForm button {
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
